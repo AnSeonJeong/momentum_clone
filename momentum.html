@@ -7,13 +7,25 @@
     <title>momentum</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/greeting.js" defer></script>
+    <script src="js/clock_and_date.js" defer></script>
+    <script src="js/background.js" defer></script>
+    <script src="js/to-do-list.js" defer></script>
+    <script src="js/weather.js"></script>
 </head>
 <body>
+    <h2 id="clock">00:00:00</h2>
+    <h4 id="this_day"></h3>
     <form id="login_form" class="hidden">
         <input type="text" placeholder="What is your name?😝" required></input>
         <input type="submit" value="login"></input>
     </form>
     <h1 class="greeting"></h1>
     <button class="logout">Logout</button>
+    <div class="todo">
+        <form id="todo_form">
+            <input type="text" placeholder="What to do today?❤️" required></input>
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
 </body>
 </html>
