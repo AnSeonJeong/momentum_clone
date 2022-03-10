@@ -146,14 +146,6 @@ function handlePrevBtn() {
     nextMusic();
 }
 
-function nextPlay() {
-    if(musicStart.innerText===musicEnd.innerText) {
-        audio.currentTime = 0;
-        handleNextBtn();
-    }
-    console.log(musicStart.innerText)
-}
-
 function musicBar() {
     setInterval(()=>{
         let percentage = (audio.currentTime)/(audio.duration)*100
@@ -162,6 +154,7 @@ function musicBar() {
 }
 
 audio.addEventListener("loadedmetadata", timeOfMusic);
+audio.addEventListener("ended", handleNextBtn);
 playBtn.addEventListener("click", handlePlayBtn);
 nextBtn.addEventListener("click", handleNextBtn);
 prevBtn.addEventListener("click", handlePrevBtn);
