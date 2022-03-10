@@ -61,7 +61,7 @@ const music = [
     },
     {
         mp3: "백예린 - Lovegame.mp3",
-        art: "Lovegame.jpg",
+        art: "lovegame.jpg",
         name: "Lovegame" 
     },
 ]
