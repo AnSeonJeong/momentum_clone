@@ -17,19 +17,31 @@ function deleteToDo(event) {
     saveToDo();
 }
 
+function checkTodo(event) {
+    const checkBtn = event.target
+    if(checkBtn.checked===true) {
+        checkBtn.parentElement.classList.add("checked");
+    } else {
+        checkBtn.parentElement.classList.remove("checked");
+    }
+}
+
 function paintToDo(newToDo) {
     const li = document.createElement("li");
     li.id = newToDo.id;
     const span = document.createElement("span");
     span.innerText = newToDo.text;
+    const checkBtn = document.createElement("input");
+    checkBtn.type = "checkbox";
+    checkBtn.addEventListener("click",checkTodo);
     const deleteBtn = document.createElement("button");
     deleteBtn.innerText = "❌";
     deleteBtn.addEventListener("click", deleteToDo);
 
     li.appendChild(span);
+    li.prepend(checkBtn);
     li.appendChild(deleteBtn);
     toDoList.appendChild(li)
-
 }
 
 function submitToDo(e) {

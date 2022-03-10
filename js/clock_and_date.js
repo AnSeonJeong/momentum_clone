@@ -7,12 +7,12 @@ function handleClockAndDate() {
     const hours = String(today.getHours()).padStart(2, "0");
     const minutes = String(today.getMinutes()).padStart(2, "0");
     const seconds = String(today.getSeconds()).padStart(2, "0");
-    clock.innerText = `${hours}:${minutes}:${seconds}`;
+    clock.innerText = `${hours}  : ${minutes} : ${seconds}`;
 
-    const month = today.getMonth()+1;
-    const date = today.getDate();
-    const day = week[today.getDay()];
-    thisDay.innerText = `${month}월 ${date}일 ${day}요일`;
+    const month =String(today.getMonth()+1).padStart(2, "0");
+    const date = String(today.getDate()).padStart(2, "0");
+    const year = today.getFullYear();
+    thisDay.innerText = `${year}.${month}.${date}`;
 }
 
 handleClockAndDate();

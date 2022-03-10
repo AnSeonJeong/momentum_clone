@@ -1,3 +1,491 @@
+:root {
+    --bright-color: #fbfbfb;
+    --dark-color: #3d3d3d;
+    --red-color: #e00404;
+    --main-font:"pretendard";
+    --quote-font:"PT serif";
+    --box-width: 150px;
+    --radius-value: 20px;
+}
+
+body, html {
+    color: var(--dark-color);
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    padding: 0;
+    margin: 0 auto;
+
+}
+
+li {
+    list-style: none;
+}
+
+input
+,input:focus {
+    list-style: none;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: var(--main-font);
+}
+
+#icons {
+    display: grid;
+    grid-template-columns: 141px 141px 141px 141px 141px;
+    justify-content: center;
+    position: relative;
+    bottom: -60px;
+    padding: 0;
+}
+
+#icons li {
+    text-align: center;
+    cursor: pointer;
+}
+
+#icons li:hover {
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#icons li div {
+    color: var(--dark-color);
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#clock {
+    font-size: 6.5em;
+    text-align: center;
+    font-weight: 600;
+    color: var(--bright-color);
+}
+
+/* login */
+#login_form input:focus {
+    text-align: center;
+}
+
+#login_form input::placeholder {
+    color: var(--red-color);
+    text-align: center;
+}
+
+#login_form input:first-child {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0.7em;
+    position: relative;
+    bottom: -210px;
+}
+
+.greeting {
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    bottom: -210px;
+    color: var(--red-color);
+}
+
+.toggleBtn {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    width: 150px;
+    height: 49px;
+    background-color: var(--bright-color);
+    border-radius: var(--radius-value);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleBtn > img {
+    display: block;
+    filter: invert(45%) sepia(91%) saturate(1901%) hue-rotate(10deg) brightness(107%) contrast(103%);
+}
+
+.toggleBtn > span {
+    padding-left: 5px;
+}
+
+.dark {
+    filter: invert(68%) sepia(33%) saturate(1862%) hue-rotate(3deg) brightness(111%) contrast(101%) !important;
+}
+
+.logout {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    color: var(--red-color);
+    font-size: 2.6em;
+    font-weight: bold;
+}
+
+.wrap {
+    width: 460px;
+    padding: 0 60px;
+}
+
+
+
+.right {
+    position: absolute;
+    top: 8%;
+    right: 10px;
+}
+
+.left {
+    position: absolute;
+    top: 22%;
+    left: 10px;
+}
+
+/* weather */
+.weather {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 30px;
+    background-color: var(--bright-color);
+    border-radius: var(--radius-value);
+    padding: 20px 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+}
+
+.weather img {
+    padding: 15px 0;
+    width: 150px;
+    height: 150px;
+}
+
+.weather .weather_info {
+    text-align: center;
+    padding: 0;
+}
+
+.weather .weather_info li:first-child {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 25px;
+
+}
+
+.weather .weather_info li:nth-child(2) {
+    font-size: 2em;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+/* daily */
+.daily {
+    width: 100%;
+    height: 210px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    background-color: var(--bright-color);
+    border-radius: var(--radius-value);
+    font-family: var(--quote-font);
+    box-sizing: border-box;
+}
+
+#this_day {
+    font-size: 2em;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+}
+
+#quote {
+    text-align: center;
+    font-style: italic;
+    padding: 15px 0;
+}
+
+#quote span {
+    display: block;
+    padding: 8px 20px;
+}
+
+#quote span:first-child {
+    font-size: 1.15em;
+}
+
+/* d-day */
+.d_day {
+    width: 100%;
+    height: 192px;
+    background-color: var(--bright-color);
+    border-radius: var(--radius-value);
+    text-align: center;
+    padding: 25px 30px;
+    box-sizing: border-box;
+}
+
+.d_day .dDayBtn {
+    color: var(--bright-color);
+    border: 1px solid var(--red-color);
+    background-color: var(--red-color);
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+#dDay_form {
+    padding-top: 20px;
+}
+
+#dDay_setting .dDay_date input:not(:last-child) {
+    width: 200px;
+    height: 26px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 8px;
+    margin: 7px 0;
+}
+
+#dDay_setting .dDay_date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+#dDay_setting input[type="submit"] {
+    margin-top: 28px;
+    width: 60px;
+}
+
+.d_day .showing {
+    display: flex;
+    flex-direction: column;
+}
+
+.d_day .showing h2 {
+    margin: 0;
+    padding-top: 30px;
+}
+
+.d_day .showing span {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--red-color);
+    padding-bottom: 15px;
+}
+
+.d_day .deleteBtn {
+    position: relative;
+    right: -170px;
+    bottom: 10px;
+}
+
+/* music player */
+.music_player {
+    width: 100%;
+    height: 286px;
+    background-color: var(--bright-color);
+    border-radius: var(--radius-value);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 18px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.music_img {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.music_img::after {
+    content: "";
+    background-color: var(--bright-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.music_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+
+    animation: rotate 5s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.music_img img.rotate {
+    animation-play-state: running;
+}
+
+.music_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    width: 210px;
+    height: 230px;
+    padding-left: 30px;
+}
+
+.music_container .info .name {
+    margin: 0;
+}
+
+.music_container .info .artist {
+    color: #706f6f;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.music_container .info .progress {
+    background-color: #ddd;
+    height: 3px;
+    width: 100%;
+    position: relative;
+}
+
+.music_container .info .progress .bar {
+    position:absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--red-color);
+    width: 0;
+    transition: all .2s ease;
+}
+
+.music_container .info .progress .time {
+    display: flex;
+    justify-content: space-between;
+    color: #706f6f;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+.music_container .nav {
+    margin-top: 30px;
+}
+
+.music_container .nav button{
+    width: 60px;
+    height: 65px;
+    border-radius: 10px;
+}
+
+.music_container .nav button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+
+.prev, .play, .next {
+    filter: invert(79%) sepia(1%) saturate(0%) hue-rotate(12deg) brightness(98%) contrast(86%);
+}
+
+/* to do list */
+.todo {
+    width: 100%;
+    border-radius: var(--radius-value);
+    background-color: var(--bright-color);
+    padding: 35px 50px;
+    box-sizing: border-box;
+}
+
+#todo_form input {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#todo-list {
+    padding: 0;
+}
+
+#todo-list li {
+    text-align: left;
+    padding-top: 10px;
+}
+
+#todo-list li input {
+    margin-right: 8px;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: #a5a5a5;
+}
+
+#todo-list li button {
+    float: right;
+}
+
+/* bookmark */
+#bookmark-wrap {
+    display: grid;
+    justify-content: center;
+}
+
+#bookmark {
+    display: grid;
+    grid-template-columns: 130px 130px 130px 130px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: -230px;
+    width: 550px;
+    height: 129px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+    padding: 0;
+}
+
+#bookmark li:hover {
+    transform: scale(1.1);
+    transition: 400ms;
+}
+
 .hidden {
     display: none;
+}
+
+.bgImg {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
