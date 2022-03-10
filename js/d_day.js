@@ -14,6 +14,8 @@ const DDAYNAME = "d-day_name";
 const DDAYDATE = "d-day_date";
 const DDAY = "d-day";
 
+let paintDDay = false;
+
 let dDay = [];
 
 function deleteDDay() {
@@ -24,6 +26,7 @@ function deleteDDay() {
     deleteBtn.classList.add(HIDDEN);
     showing.classList.add(HIDDEN);
     saveDDay();
+    paintDDay = false;
 
     showName.innerText = "";
     showDate.innerText = "";
@@ -62,6 +65,7 @@ function settingForm(e) {
     dDay.push(dDayObj);
     showDDay(dDayObj);
     saveDDay();
+    paintDDay = true;
 }
 
 function showDDay(dDay) {
@@ -76,6 +80,13 @@ if(savedDDay!==null) {
     const parsedDDay = JSON.parse(savedDDay)
     dDay = parsedDDay;
     parsedDDay.forEach(showDDay);
+}
+
+if(!paintDDay) {
+    dDayForm.classList.add(HIDDEN);
+    deleteBtn.classList.remove(HIDDEN);
+} else {
+    dDayForm.classList.remove(HIDDEN);
 }
 
 addBtn.addEventListener("click", enterForm);

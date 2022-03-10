@@ -77,9 +77,6 @@ const progressBar = document.querySelector(".info .progress .bar");
 const musicStart = document.querySelector(".info .progress .time .start");
 const musicEnd = document.querySelector(".info .progress .time .end");
 
-// play클릭하면 버튼 이미지가 바뀌고 음악이 재생됨
-// next 클릭하면 다음 음악으로 넘어가고, 음악이 재생됨
-
 const PAUSED = "paused";
 const ROTATE = "rotate";
 
